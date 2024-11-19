@@ -5,6 +5,8 @@ import { Inter as FontSans } from "next/font/google";
 
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme-provider";
+// import { QueryProvider } from "@/service/react-query/queryprovider";
+import QueryWrapper from "@/components/QueryWrapper";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -31,15 +33,17 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
+        <QueryWrapper>
           {" "}
-          {children}
-        </ThemeProvider>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            {children}
+          </ThemeProvider>
+        </QueryWrapper>
       </body>{" "}
     </html>
   );
