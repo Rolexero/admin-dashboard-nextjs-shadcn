@@ -14,23 +14,43 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🎬 Movie App
+📖 Description
+A modern and responsive movie application built with Next.js, styled using TailwindCSS, and featuring ShadCN UI components for an elegant user interface. The app fetches movie data from The Movie Database (TMDB) API and uses React Query for efficient API state management.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+🌟 Features
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Popular Movies: Browse trending and popular movies.
+- Search Functionality: Quickly search for movies by title.
+- Movie Details: View comprehensive details about a selected movie.
+- Responsive Design: Optimized for both desktop and mobile devices.
+- Fast Performance: Powered by Next.js server-side rendering and React Query for state management.
+  🛠️ Tech Stack
+- Framework: Next.js for routing and server-side rendering.
+  Styling:
+- TailwindCSS for utility-first CSS.
+- ShadCN for accessible UI components.
+- Tailwind-Styled-Components for styled components.
+- API Management: React Query for efficient API state handling.
+- Backend API: The Movie Database (TMDB) for movie data.
 
-## Learn More
+🛤️ Application Workflow
+Landing Page:
 
-To learn more about Next.js, take a look at the following resources:
+- Displays a list of popular movies, fetched dynamically using the TMDB API.
+  Search Feature:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Allows users to search for movies using a search bar.
+- Data is fetched efficiently with React Query, minimizing redundant API calls.
+- Movie Details Page:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- Displays detailed information about the movie.
+- Server-side rendering ensures fast load times and improved SEO.
+  Responsive Design:
 
-## Deploy on Vercel
+- Optimized for all screen sizes, ensuring a seamless experience on mobile, tablet, and desktop.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Deployment
+The application is deployed on Vercel for production.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Live Demo: [Rolexflix](https://rolexflix.vercel.app/)
