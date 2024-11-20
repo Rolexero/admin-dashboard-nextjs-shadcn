@@ -27,6 +27,7 @@
     "react-dom": "^18",
     "react-hook-form": "^7.52.0",
     "react-infinite-scroll-component": "^6.1.0",
+    "react-use": "^17.5.1",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7",
     "twin.macro": "^3.4.1",

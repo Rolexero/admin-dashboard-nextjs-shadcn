@@ -37,6 +37,7 @@ import { usePathname } from "next/navigation";
 import useCreateSessionId from "@/hooks/useGetSessionID";
 // import { useRouter } from "next/navigation";
 import axios from "axios";
+import { useLocalStorage } from "react-use";
 
 interface LayoutInterface {
   children: React.ReactNode;
@@ -52,14 +53,18 @@ const PageLayout = ({ children }: LayoutInterface) => {
   // console.log(data, "data");
 
   // const sessionIdFromStorage = localStorage.getItem("session_id")!!;
-  const sessionIdFromStorage = localStorage.getItem("session_id");
+  // const sessionIdFromStorage = localStorage.getItem("session_id");
+
+  const [session, setSession] = useLocalStorage<string | null>(
+    "session_id",
+    null
+  );
 
   // const
-
   // console.log(data?.data?.guest_session_id, "data");
 
-  if (sessionIdFromStorage == "undefined" || sessionIdFromStorage == null) {
-    localStorage.setItem("session_id", data?.data?.guest_session_id);
+  if (session == "undefined" || session == null) {
+    setSession(data?.data?.guest_session_id);
   }
   // const createGuestSession = async () => {
   //   const options = {
