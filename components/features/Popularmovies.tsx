@@ -18,10 +18,10 @@ import Adminsearch from "./admin-search";
 const Popularmovies = () => {
   const [isLiked, setIsLiked] = useState(false);
 
-  const toggleLike = () => {
-    setIsLiked(!isLiked);
-    // Optionally, handle any backend updates here, like sending a "liked" request
-  };
+  // const toggleLike = () => {
+  //   setIsLiked(!isLiked);
+  //   // Optionally, handle any backend updates here, like sending a "liked" request
+  // };
 
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -69,7 +69,7 @@ const Popularmovies = () => {
                   <p className="mt-2 font-semibold">{movie.title}</p>
                   <div
                     className="absolute top-2 right-2 cursor-pointer"
-                    onClick={toggleLike}
+                    // onClick={toggleLike}
                   >
                     <Heart
                       size={24}
